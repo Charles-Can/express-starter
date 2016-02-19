@@ -10,5 +10,6 @@ module.exports = function(grunt) {
     sass: require('./grunt/grunt.sass')
   });
 
-  grunt.registerTask('default', ['express', 'watch']);
+  grunt.registerTask('build', ['sass']);
+  grunt.registerTask('default', ['express', 'build', 'watch']);
 };

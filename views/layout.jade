@@ -1,9 +1,20 @@
 doctype html
 html
   head
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+
     block title
       title Default title
+
     link(rel='stylesheet', href='/stylesheets/index.css')
+    link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Roboto:300,400,500,700')
+    link(rel='stylesheet', href='//fonts.googleapis.com/icon?family=Material+Icons')
+
     script(src='//localhost:35729/livereload.js')
+
   body
-    block content
+    .mdl-layout.mdl-js-layout
+      block content
+
+    script(src='//code.getmdl.io/1.1.1/material.min.js')
