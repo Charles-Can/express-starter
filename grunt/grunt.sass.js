@@ -1,10 +1,17 @@
 module.exports={
-	options: {
-		sourceMap: true
-	},
-	dist: {
-		files: {
-			'public/stylesheets/index.css': 'scss/index.scss'
-		}
-	}
+  options: {
+    sourceMap: true,
+    includePaths: [
+      './bower_components/material-design-lite/src/'
+    ]
+  },
+  dist: {
+    files: [{
+    expand: true,
+    flatten: true,
+    src: ['scss/*.scss'],
+    dest: 'public/stylesheets/',
+    ext: '.css'
+  }]
+  }
 };
